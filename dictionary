@@ -1,0 +1,27 @@
+student_info = {
+    "name": "peter",
+    "age": 20,
+    "major": "Maths",
+    "GPA": 3.8,
+    "graduated": False,
+    "credits": 90,
+    "email": "peter@example.com",
+    "year": "Junior",
+    "hobbies": ["football", "coding", "Cricket"],
+    "languages": {"English": "fluent", "Russian": "intermediate"}
+}
+
+print("Name:", student_info["name"])                          
+student_info["internship"] = "Google"        
+student_info["GPA"] = 3.8    
+print("Phone:", student_info.get("phone", "Not provided"))           
+del student_info["graduated"]      
+print("Student details:")
+for key, value in student_info.items():
+    print(f"{key}: {value}")     
+    print("All keys:", list(student_info.keys()))      
+    print("All values:", list(student_info.values()))       
+    if "email" in student_info:
+    print("Email is present.")   
+    internship = student_info.pop("internship")
+print("Removed internship at:", internship)
